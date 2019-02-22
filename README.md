@@ -7,5 +7,6 @@ Speler 1 begint met een kruisje als die op de button klikt en vervolgens is play
 Als er een winnaar is dan wordt de winnaar weergeven en anders een draw. 
 Hierna kunnen er geen zetten meer worden gezet totdat je op de reset button klikt.
 
-![title](https://github.com/otak007/tic-tac-toe-new-/blob/master/Screenshot_20190222-102741.png)
-![title](https://github.com/otak007/tic-tac-toe-new-/blob/master/Screenshot_20190222-102747.png)
+![](https://github.com/otak007/tic-tac-toe-new-/blob/master/Screenshot_20190222-102709.png)
+
+![](https://github.com/otak007/tic-tac-toe-new-/blob/master/Screenshot_20190222-102723.png)
