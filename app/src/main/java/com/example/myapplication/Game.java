@@ -50,6 +50,7 @@ public class Game implements Serializable {
                 gameOver = true;
                 return GameState.PLAYER_TWO;
             }
+        // when nobody has won the game, check if there is no empty tile anymore.
         if (movesPlayed == BOARD_SIZE*BOARD_SIZE) {
             gameOver = true;
             return GameState.DRAW;

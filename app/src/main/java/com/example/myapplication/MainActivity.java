@@ -32,11 +32,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // create messages when the game is finished
         toastPlayer1 = Toast.makeText(this, "PLAYER 1 WINS", Toast.LENGTH_LONG);
         toastPlayer2 = Toast.makeText(this, "PLAYER 2 WINS", Toast.LENGTH_LONG);
         toastDraw = Toast.makeText(this, "DRAW", Toast.LENGTH_LONG);
 
-
+        // give the view to button variable
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         button8.setText(inState.getString("button8"));
         button9.setText(inState.getString("button9"));
     }
+    // methode when the tile is clicked
     public void tileClicked(View view) {
         int id = view.getId();
         Button button = (Button) view;
@@ -88,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
         int row = 0;
         int column = 0;
 
+        // give each button his own coordinates
         switch (id) {
             case R.id.button1:
                 row = 0;
@@ -135,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
             case CIRCLE:
                 button.setText("O");
                 break;
+            // When it's not possible, give the user a message
             case INVALID:
                 Toast.makeText(this, "INVALID BUTTON", Toast.LENGTH_SHORT).show();
                 break;
@@ -158,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
     // reset the game when the reset tile is clicked
     public void resetClicked(View view) {
         game = new Game();
-
+        // make all tiles empty
         button1.setText(" ");
         button2.setText(" ");
         button3.setText(" ");
@@ -169,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
         button8.setText(" ");
         button9.setText(" ");
 
+        // remove the message of the screen
         toastDraw.cancel();
         toastPlayer2.cancel();
         toastPlayer1.cancel();
